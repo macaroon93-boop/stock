@@ -268,7 +268,7 @@ with st.sidebar:
     risk_mode = st.selectbox("위험 성향", ["Conservative","Balanced","Aggressive"], index=1,
                              format_func={"Conservative":"보수형","Balanced":"균형형","Aggressive":"공격형"}.get)
     run = st.button("최신 데이터 수집 및 분석", type="primary", use_container_width=True)
-
+    fred_key = ""
 if "result" not in st.session_state:
     st.session_state.result = None
 if run or st.session_state.result is None:
